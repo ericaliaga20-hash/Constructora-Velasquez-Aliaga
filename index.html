@@ -305,12 +305,26 @@ footer a{color:var(--orange);text-decoration:none;}
       <div><strong>Dirección</strong><span>Jr. Alcidez Carrion 485, Trujillo</span></div>
     </div>
   </div>
-  <div class="form">
-    <div class="form-group"><label>Nombre</label><input type="text" placeholder="Su nombre"></div>
-    <div class="form-group"><label>Email</label><input type="email" placeholder="su@email.com"></div>
-    <div class="form-group"><label>Mensaje</label><textarea placeholder="Cuéntenos sobre su proyecto..."></textarea></div>
-    <button class="btn-send" onclick="alert('¡Gracias! Nos pondremos en contacto pronto.')">Enviar Mensaje</button>
-  </div>
+  <form action="https://api.web3forms.com/submit" method="POST" class="form">
+      <input type="hidden" name="access_key" value="4958e6d6-8d65-4ac2-a12b-6de1cf5c7e41">
+
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" name="name" placeholder="Su nombre" required>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="su@email.com" required>
+    </div>
+      <div class="form-group">
+        <label>Mensaje</label>
+        <textarea name="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+    </div>
+      <input type="hidden" name="redirect" value="https://constructora-velasquez-aliaga.vercel.app">
+
+    <button type="submit">ENVIAR MENSAJE</button>
+</form>
 </section>
 
 <footer>
